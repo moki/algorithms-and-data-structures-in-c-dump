@@ -57,7 +57,7 @@ int Dequeue(Queue q) {
 
   q->head = q->head % q->size;
   
-  return q->content[q->head++];  
+  return q->content[q->head++];   
 }
 
 int QueueIsEmpty(Queue q) {
