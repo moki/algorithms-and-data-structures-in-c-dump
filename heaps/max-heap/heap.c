@@ -196,6 +196,23 @@ int HeapExtractMax(Heap h) {
   return m;
 }
 
+void HeapIncrease(Heap h, int i, int v) {
+  assert(h);
+  assert(i);
+  assert(v);
+  assert(v >= h->xs[i]);
+
+  h->xs[i] = v;
+
+  while (i > 0 && h->xs[(i - 1) / 2] < h->xs[i]) {
+    int t = h->xs[i];
+    h->xs[i] = h->xs[(i - 1) / 2];
+    h->xs[(i - 1) / 2] = t;
+
+    i = (i - 1) / 2;
+  }
+}
+
 int HeapIsEmpty(Heap h) {
   return !h->used;
 }

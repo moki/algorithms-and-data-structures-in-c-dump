@@ -10,10 +10,14 @@ int main(int argc, char **argv) {
   HeapInsert(h, 3);
   HeapInsert(h, 4);
 
-  assert(HeapPeekMax(h) == 4);
+  HeapRawDisplay(h);
+  HeapIncrease(h, 2, 5);
+  HeapRawDisplay(h);
+
+  assert(HeapPeekMax(h) == 5);
   assert(HeapSize(h) == 4);
 
-  assert(HeapExtractMax(h) == 4);
+  assert(HeapExtractMax(h) == 5);
   
   assert(HeapSize(h) == 3);
 
