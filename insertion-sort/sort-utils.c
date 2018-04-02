@@ -10,7 +10,7 @@ int isSorted(int *a, int s) {
   int sorted = 1;
   int i = 0;
 
-  while (i++ < s) {
+  while (i++ < s - 1) {
     sorted = *(a + i - 1) <= *(a + i) ? sorted : 0;
   }
 
