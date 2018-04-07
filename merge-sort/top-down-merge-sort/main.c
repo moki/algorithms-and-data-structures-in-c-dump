@@ -14,4 +14,6 @@ int main(int argc, char **argv) {
   mergeSort(a, 0, SIZE);
   
   assert(isSorted(a, SIZE));
+
+  free(a);
 }

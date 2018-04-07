@@ -29,6 +29,8 @@ void merge(int *xs, int l, int m, int r) {
 
     k++;
   }
+
+  free(ys);
 }
 
 void mergeSort(int *xs, int l, int r) {
