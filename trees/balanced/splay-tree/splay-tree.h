@@ -1,5 +1,5 @@
-/*
- * Generic Binary Search Tree
+/**
+ * Generic Splay Tree
  *
  * May 2018 Kirill Morozov <morozov.kirill.moki@gmail.com>
  */
