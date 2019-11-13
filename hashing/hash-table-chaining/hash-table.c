@@ -21,11 +21,12 @@ hash_table_constructor(
 	hash_table *table = malloc(sizeof(hash_table));
 	if (!table) return NULL;
 
-	table->table = malloc(sizeof(struct hash_bucket) * size);
-	if (!table->table) return NULL;
+        table->table = malloc(sizeof(struct hash_bucket *) * size);
+        if (!table->table)
+          return NULL;
 
-	uint32_t i;
-	for (i = 0; i < size; i++) {
+        uint32_t i;
+        for (i = 0; i < size; i++) {
 		table->table[i] = NULL;
 	}
 
